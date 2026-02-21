@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Grid Layouts</title>
+    <style>
+        grid-pixels {
+            display: grid;
+            grid-template-coloumns: 100px 150px 200px;
+            margin: 10px;
+        }
+        
+        . .grid-percent {
+            display: grid;
+            grid-template-coloumns: 30% 40% 30%;
+            gap: 10px;
+        }
+        
+        .grid-fr {
+            display: grid;
+            grid-template-coloumns: 1fr 2fr 1fr;
+            margin: 10px;
+        }
+        
+        item {
+            background-color: aliceblue;
+            color: red;
+            padding: 20 px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Fixed width column using pixels -->
+    <div class="grid pixels">
+        <div class="" item>100px</div>
+        <div class="" item>150px</div>
+        <div class="" item>200px</div>
+    </div>
+    <!-- Fixed width column using percentage -->
+    <div class="grid pecentage">
+        <div class="" item>30%</div>
+        <div class="" item>40 %/div>
+            <div class="" item>30%</div>
+        </div>
+        <!-- Fixed width column using fractional columns -->
+        <div class="grid-fr">
+            <div class="" item>1fr</div>
+            <div class="" item>2frdiv>
+                <div class="" item>1fr</div>
+            </div>
+
+
+</body>
+
+</html>
+
+</html>
