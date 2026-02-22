@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Flex layout</title>
+    <style>
+        .flex-container {
+            background-image;
+            background-color: rgb(164, 102, 25);
+            display: flex;
+            /* space-around / flex-start /center / flex-end / center /space-between*/
+            justify-content: space-evenly;
+            /* verticl-align: center */
+            align-items: baseline;
+            height: 100px;
+            flex-direction: row-riverse;
+            /* row-riverse / row-column */
+            flax-wrap: row;
+            /* nowrap / wrap-reverse */
+        }
+        
+        .flex-item {
+            background-color: rgb(47, 15, 144);
+            margin: 10px;
+            padding: 20px;
+            width: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Display: flex</h1>
+    <div class="flex-container">
+        <div class="flex-item">content 1</div>
+        <div class="flex-item">content 2</div>
+        <div class="flex-item">content 3</div>
+
+
+    </div>
+</body>
+
+</html>
