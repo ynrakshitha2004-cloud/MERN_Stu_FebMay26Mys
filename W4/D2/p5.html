@@ -7,9 +7,17 @@
 </head>
 <body>
     <form id="signupForm">
-        <label>email: <input type="text" id="signupemail" name="email">  <br><br>
+   <label>email: 
+    <input type="text" id="signupemail" name="email"></label> <br><br>
+   
+           <!---- <input type="text" id="contactnumber" pattern="^[0-9]{10}$"
+           placeholder="eg: 967890120" > -->
             <label>password: <input type="password"
-            id="signuppassword"></label>
+            id="signuppassword"></label> <br><br>
+            <label>Confirm Password:
+<input type="password" id="confirmpassword">
+</label>
+<br><br>
             <button type="submit">submit</button>
     </form>
     <p id="message"></p>
