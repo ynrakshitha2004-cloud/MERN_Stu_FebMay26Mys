@@ -15,9 +15,15 @@ saveBtn.addEventListener("click", function () {
 });
 
 document.getElementById("readBtn").addEventListener("click",function(){
+    try{
     const username = localStorage.getItem("userProfile");
     console.log(JSON.parse(username))
     console.log(username);
     jsonOutput.textContent = " userProfile" + username;
-    
+    }
+    catch(error){
+          jsonOutput.textContent = "json parsing failed";
+
+    }
+     
 });
