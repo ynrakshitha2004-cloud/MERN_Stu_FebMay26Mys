@@ -24,7 +24,7 @@ existingBtn.addEventListener("click", function () {
     })
 
     .then(function(data) {
-        statusOutput.textContent += " | Success: " + JSON.stringify(data, null, 2);
+        statusOutput.textContent += " | Success: " + JSON.stringify(data, null, 2);//null is additional function simply convert into string. 
     })
 
     .catch(function(error) {
