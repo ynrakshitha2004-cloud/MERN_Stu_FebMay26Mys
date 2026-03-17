@@ -1,0 +1,238 @@
+//local storage and session storage
+client side storage- web browsers provide storage mechanuisms
+stores data on the users browsers
+data persist across page refreshes and sessions 
+2x types- local & session storage
+local storage-stores data with no expiration
+data remains even after closing the browsersstores up to 5mb per domain
+acessbile via js using local storage api.
+DNS server url.
+
+// store data
+localStorage.setItem("username", "Rakshuu");
+
+// get data
+let user = localStorage.getItem("username");
+console.log(user);
+
+// remove data
+localStorage.removeItem("username");
+
+// clear all data
+localStorage.clear();
+
+localStorage → Browser storage object.
+
+///setItem() → Method used to store data.
+
+"username" → Key (name used to identify the data).
+
+"Rakshuu" → Value (actual data stored).
+
+///getItem("username") → retrieves the value stored with that key.
+
+The value is stored inside variable user.
+
+console.log(user) → prints the value in the browser cons
+
+
+localStorage.clear();
+
+Explanation:
+
+clear() removes all data stored for that website in local storage.
+
+Every key-value pair will be deleted.
+
+Example:
+
+Before clear:
+
+username = Rakshuu
+email = rakshu@gmail.com
+theme = dark
+
+After clear:
+
+(empty storage)
+Session Storage Code Explanation
+Store Data
+sessionStorage.setItem("email", "rakshu@gmail.com");
+
+Saves email in session storage.
+
+Data exists only while the browser tab is open.
+
+Get Data
+let email = sessionStorage.getItem("email");
+console.log(email);
+
+Retrieves stored email.
+
+Prints it in the console.
+
+Remove Data
+sessionStorage.removeItem("email");
+
+Deletes the email value from session storage.
+
+Key Difference (Strategic Summary)
+Feature	Local Storage	Session Storage
+Lifetime	Permanent	Until tab closes
+Browser close	Data stays	Data removed
+Usage	Settings, saved data	Temporary session data
+
+💡 Pro tip for developers:
+Both localStorage and sessionStorage store only strings. If you want to store objects, you must use:
+
+localStorage.setItem("user", JSON.stringify({name:"Rakshuu"}));
+
+let data = JSON.parse(localStorage.getItem("user"));
+
+If you want, I can also explain Local Storage with a real example (saving form data) — that’s a very common JavaScript training interview question. 🚀localStorage.clear();
+
+Explanation:
+
+clear() removes all data stored for that website in local storage.
+
+Every key-value pair will be deleted.
+
+Example:
+
+Before clear:
+
+username = Rakshuu
+email = rakshu@gmail.com
+theme = dark
+
+After clear:
+
+(empty storage)
+Session Storage Code Explanation
+Store Data
+sessionStorage.setItem("email", "rakshu@gmail.com");
+
+Saves email in session storage.
+
+Data exists only while the browser tab is open.
+
+Get Data
+let email = sessionStorage.getItem("email");
+console.log(email);
+
+Retrieves stored email.
+
+Prints it in the console.
+
+Remove Data
+sessionStorage.removeItem("email");
+
+Deletes the email value from session storage.
+
+Key Difference (Strategic Summary)
+Feature	Local Storage	Session Storage
+Lifetime	Permanent	Until tab closes
+Browser close	Data stays	Data removed
+Usage	Settings, saved data	Temporary session data
+
+💡 Pro tip for developers:
+Both localStorage and sessionStorage store only strings. If you want to store objects, you must use:
+
+localStorage.setItem("user", JSON.stringify({name:"Rakshuu"}));
+
+let data = JSON.parse(localStorage.getItem("user"));
+
+example (saving form data) — that’s a very common JavaScript training interview question. 
+
+
+
+// useful for storing user preferences & tempory data
+//improves performance
+limitations:
+cannot store complex obj directly
+no-bilt in encryption
+data is accesable via js,posing security risks
+
+
+usees:local storage for long-term data like & user Settings
+use session storage for temporary 
+
+security:no automation encryption
+vulnerable to cross-scripting(xss)attack
+should not store sensitive inf like passwords.
+
+
+//fetch api-is modern js interface for making HTTP request-it is secure way of data hosted on internet.
+it provides more powerfull and flexible feature set compared to XMLHTTPrequest.
+it is based on promises,making asynchronus requests easier to handle
+
+//syntax of api
+
+fetch(url,options)
+fetch(url)
+.then(response => response.json())//then refers to if the condition...
+.then(data => {//data to acess
+    console.log(data);
+})
+.catch(error => {
+    console.log(error);
+});
+
+
+ex of api
+fetch("https://jsonplaceholder.typicode.com/posts/1")//for fake data
+.then(response => response.json())
+.then(data => {
+    console.log(data.title);
+    console.log(data.body);
+})
+.catch(error => {
+    console.log("Error:", error);
+});
+//fetch api allow retreiving data from server
+the response need to be conevreted into as usable format like json.
+
+
+--->d2- asynchronus-non blocking from other device //it creates multiple thread
+//await-wait until one request is receive
+//thread-it indicates sub task
+JavaScript is single-threaded.
+
+That means:
+
+Only one task executes at a time in the call stack.
+
+But JavaScript stays efficient using:
+
+Event Loop
+
+Callback Queue
+
+Web APIs
+
+try → Runs the risky code
+
+catch → Executes if an error occurs
+
+error → Contains information about the error
+
+//internalization(L18n),localization(L10n)- refers to adapting and application to and geolocation in web applications
+a specific langauge,region, and cultural expectations  it delivers user friendly experience for internal auidence.
+it ensures text,no,data,curesies
+-=and geolocation in web applications
+why?-improves accesable for global users.
+
+-charcter encoding and unicode
+-language detection and langauage switching
+-regional formatting
+
+//internalization(i18n)prepares the apll for multiple langauage
+it adapts prepared appl to specific region.
+ex:bulids(i18n) translation infrastructure
+
+
+charcter encoidng is the method used to represent text characters in computer sysytems.
+every charcter must map to a numeric code that computer can store
+
+utf8-unicode is a universal charcter set designed to represent charactersfrom all langauges
+used on web
