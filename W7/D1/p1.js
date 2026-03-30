@@ -1,4 +1,4 @@
-//Basics of ExpressJS - setup
+//Basics of ExpressJS-setup
 // npm init -y 
 //npm install express 
 
