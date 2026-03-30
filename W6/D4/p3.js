@@ -1,4 +1,4 @@
-//Inspecting request details in a  http server
+//Inspecting request details In a  http server
 const http = require("http");
 const server = http.createServer(function(req,res){
     //writehead is a fun is used sets the response status code and headers
