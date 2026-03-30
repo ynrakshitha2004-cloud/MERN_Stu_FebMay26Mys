@@ -1,5 +1,4 @@
 //Basic routing in express
-
 app.get("/about", function (req, res) {
     res.send("about route in express server");
 });
