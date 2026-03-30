@@ -1,5 +1,5 @@
 {
-    "appName":"MyFirstApp",
+    "appName":"MyFirstapp",
     "environment":"dev",
     "features":["billing","invoiceGeneration"]
 }
