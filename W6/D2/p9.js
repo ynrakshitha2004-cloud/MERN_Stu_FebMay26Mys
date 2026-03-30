@@ -1,8 +1,6 @@
 //Removing EventEmmiter listeners
 const EventEmitter = require("events");
-
 const jobEmmiter = new EventEmitter();
-
 function showJobProgress(status){
     console.log("Job Status: ",status);
 }
