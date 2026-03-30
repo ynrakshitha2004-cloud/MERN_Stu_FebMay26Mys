@@ -1,5 +1,4 @@
-//Directory operations: mkdir, readdir and rmidir/rm
-
+//Directory operations: mkdir, read-dir and rmidir/rm
 const fs = require("fs");
 const path = require("path");
 
