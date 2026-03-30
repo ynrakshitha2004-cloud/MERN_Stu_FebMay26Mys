@@ -3,7 +3,7 @@
 const path = require("path");
 
 //JSON is loaded as a normal JS objects in CommonJS
-const appConfig = require("./support/app-config..json");
+const appConfig = require("./support/app-config...json");
 
 console.log("__dirname",__dirname);
 console.log("__filename",__filename);
