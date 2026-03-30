@@ -16,6 +16,7 @@ const server = http.createServer(function(req,res){
 server.listen(3000,function(){
     console.log("Server is running at http://localhost:3000");
 });
+
 //port nos:
 //0-1023: system ports
 //1024 - 49151: "Registered ports"
