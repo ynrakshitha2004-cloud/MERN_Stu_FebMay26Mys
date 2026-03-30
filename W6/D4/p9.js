@@ -9,6 +9,7 @@ const server = http.createServer(function (req, res) {
 
         // Validate ID
         if (!userId) {
+            
             res.writeHead(400, { "Content-Type": "application/json" });
             return res.end(JSON.stringify({
                 success: false,
