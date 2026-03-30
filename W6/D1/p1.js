@@ -5,4 +5,4 @@ function describeModule(){
     console.log("Title:",moduleTitle);
     console.log("Local value stay inside this file unless exported");
 }
-describeModule();//invoking the function
+describeModule();//invoking the functions
