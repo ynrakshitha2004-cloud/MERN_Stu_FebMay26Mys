@@ -1,5 +1,4 @@
 // process.nextTick, Promise microtask & Timer
-
 console.log("1. Start of script");
 
 // process.nextTick runs immediately after current sync code
