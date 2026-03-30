@@ -6,6 +6,7 @@ const server = http.createServer(function (req, res) {
         req.on("data", function (chunk) {
             body += chunk.toString();
         });
+        
         req.on("end", function () {
             try {
                 const parsed = JSON.parse(body);
