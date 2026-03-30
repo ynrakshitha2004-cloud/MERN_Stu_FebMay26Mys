@@ -1,4 +1,4 @@
-//understanding the event loop
+//understanding the event loops
 
 console.log("1.Synchronous task started ");
 
