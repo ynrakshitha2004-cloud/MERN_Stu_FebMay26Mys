@@ -45,4 +45,4 @@ orderEmitter.once("OrderPlaced", // EXECUTE ONLY ONCE
  //emit the event with extra data
  //the listener receives the orderId value.
 orderEmitter.emit("OrderPlaced","ORD-2403001","Rakshi",10000);
-orderEmitter.emit("OrderPlaced","ORD-2403001","Likki",10000);
+orderEmitter.emit("OrderPlaced","ORD-2403001","Likki",20000);
