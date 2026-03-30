@@ -5,10 +5,7 @@ console.log("Scheduling setTimeout and setImmediate");
 setTimeout(()=> {
     console.log("Timer callback from setTimeout");
 },0);
-
-
 //setImmediate callback
-
 setImmediate(function(){
     console.log("SetImmediate callback executed.");
 });
