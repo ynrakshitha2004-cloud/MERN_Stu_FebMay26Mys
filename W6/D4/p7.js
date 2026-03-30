@@ -1,4 +1,4 @@
-//parsing query parameters
+//Parsing query parameters
 const http=require("http");
 const {URL}=require("url");
 const server=http.createServer(function(req,res){
