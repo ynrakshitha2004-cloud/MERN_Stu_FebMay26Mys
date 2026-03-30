@@ -1,5 +1,4 @@
 // Introduction to jnode.js
-
 const runtimeName = "Node.js";
 //console.log("Introduction to Node.js");
 console.log(`${runtimeName} runs javascript outside the browser`);
