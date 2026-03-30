@@ -1,4 +1,4 @@
- // sending response in JSON format
+ // Sending response in JSON format
 const http=require("http");
 const server=http.createServer(function(req,res){
     if(req.url==="/api/status" && req.method==="GET"){
