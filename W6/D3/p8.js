@@ -1,6 +1,6 @@
 // Allocating buffers 
 const emptyBuffer = Buffer.alloc(8);
-console.log("Contents of emptyBuffer: ", emptyBuffer);
+console.log("Contents of emptyBuffer: ",emptyBuffer);
 console.log("Allocated buffer bytes:", [...emptyBuffer]);
 
 const textBuffer = Buffer.from([65, 66, 67]);
