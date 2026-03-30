@@ -1,1 +1,0 @@
-cat <<'REPL_GUIDE'
