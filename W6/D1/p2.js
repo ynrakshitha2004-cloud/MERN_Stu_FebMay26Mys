@@ -1,4 +1,4 @@
-//common JS export and import
+//Common JS export and import
 function calculateTax(amount){
     return amount*0.18;
 }
