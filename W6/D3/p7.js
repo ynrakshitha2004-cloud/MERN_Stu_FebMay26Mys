@@ -4,7 +4,7 @@
 const { text } = require("node:stream/consumers");
 
 //Here we create buffer directly from a string
-const textBuffer = Buffer.from("Rakshitha");
+const textBuffer = Buffer.from("Rakshii");
 //The value in the buffer is the encode form of the text
 console.log("Buffer object:",textBuffer);
 console.log("Buffer length: in bytes:",textBuffer.length);
