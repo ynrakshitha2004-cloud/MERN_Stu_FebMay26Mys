@@ -3,7 +3,7 @@
 const fs = require("fs/promises");
 const path = require("path");
 
- async function runPromiseBasedFileFlow(){
+ async function runPromiseBasedFilesFlow(){
  
  const filePath = path.join(__dirname, "async-note.txt");
  try{
@@ -17,4 +17,4 @@ const path = require("path");
     console.log("Promise-based fs error:",error.message);
  }
 }
-runPromiseBasedFileFlow();
+runPromiseBasedFilesFlow();
