@@ -1,9 +1,7 @@
 //Handling the error event in EvntEmmiter
-
 const { error } = require("console");
 const EvntEmmiter = require("events");
 const { EventEmitter } = require("stream");
-
 const fileEmmiter = new EventEmitter();
 
 //Rgister an error listener
