@@ -1,4 +1,4 @@
-//Renaming , deleting & checking the file existence
+//Renaming and deleting  checking the file existence
 const fs = require("fs");
 const path = require("path");
 
