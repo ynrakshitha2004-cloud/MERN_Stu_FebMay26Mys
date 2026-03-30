@@ -1,6 +1,6 @@
 // Handling different HTTP methods in express
-const express=require("express");
-const app=express();
+const express = require("express");
+const app = express();
 // To read
 app.get("/users",function(req,res){
     res.send("Returning all users");
