@@ -1,4 +1,4 @@
-// Handling different GET routes
+// Handling Different GET routes
 const http = require("http");
 
 const server = http.createServer((req, res) => {
