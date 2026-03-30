@@ -1,4 +1,4 @@
-//usage of built-in and third party modules
+//Usage of built-in and third party modules
 //path is a built in module,so it work without installation
 const path = require("path");
 
