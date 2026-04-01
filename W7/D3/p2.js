@@ -3,7 +3,6 @@ const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const app = express();
-
 app.get("/file", function (req, res, next) {
     const filePath = path.join(__dirname, "newFile.txt");
     fs.readFile(filePath, "utf-8", function (error, data) {
