@@ -24,7 +24,7 @@ function authenticateAccessToken(req, res, next) {
 
     try {
         req.user = jwt.verify(token, secretKey, {
-            algorithms: ["HS256"], 
+            algorithms: ["HS256"],
             issuer: "jwt-example",
         });
         next();
@@ -92,7 +92,7 @@ app.post("/login", function (req, res) {
 app.post("/refresh", function (req, res) {
     const { refreshToken } = req.body;
 
-    if (!refreshToken || !refreshTokens.includes(refreshToken)) { 
+    if (!refreshToken || !refreshTokens.includes(refreshToken)) {
         return res.status(401).json({
             success: false,
             message: "Refresh token is missing or invalid"
@@ -101,7 +101,7 @@ app.post("/refresh", function (req, res) {
 
     try {
         const decoded = jwt.verify(refreshToken, refreshsecretKey, {
-            algorithms: ["HS256"], 
+            algorithms: ["HS256"],
             issuer: "jwt-example"
         });
 
@@ -114,7 +114,7 @@ app.post("/refresh", function (req, res) {
             secretKey,
             {
                 expiresIn: "15m",
-                algorithm: "HS256", 
+                algorithm: "HS256",
                 issuer: "jwt-example"
             }
         );
@@ -139,7 +139,11 @@ app.get("/me", authenticateAccessToken, function (req, res) {
         user: req.user
     });
 });
-
 app.listen(4000, function () {
     console.log("JWT demo server running @ http://localhost:4000");
 });
+//curl -X POST http://localhost:4000/refresh -H "Content-Type: application/json" -d "{\"refreshToken\":
+
+//\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwMSwiZW1haWwiOiJlbWFpbEBlbWFpbC5jb20iLCJpYXQiOjE3NzUxMTIwNTIsImV4cCI6MTc3NTk3NjA1MiwiaXNzIjoiand0LWV4YW1wbGUifQ.bLSdt4uMteHx-vFQNyELch0TdeyDUZb2QjeXi3McBPY\"}"
+ //http://localhost:4000/me -H "Authorization:Bearer access-token" -d "{\"refreshToken\"://\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwMSwiZW1haWwiOiJlbWFpbEBlbWFpbC5jb20iLCJpYXQiOjE3NzUxMTIwNTIsImV4cCI6MTc3NTk3NjA1MiwiaXNzIjoiand0LWV4YW1wbGUifQ.bLSdt4uMteHx-vFQNyELch0TdeyDUZb2QjeXi3McBPY\"}"
+ //http://localhost:4000/me -H "Authorization:Bearer "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwMSwiZW1haWwiOiJlbWFpbEBlbWFpbC5jb20iLCJpYXQiOjE3NzUxMTIwNTIsImV4cCI6MTc3NTk3NjA1MiwiaXNzIjoiand0LWV4YW1wbGUifQ.bLSdt4uMteHx-vFQNyELch0TdeyDUZb2QjeXi3McBPY\"}"http://localhost:4000/me -H "Authorization:Bearer access-token" -d "{\"refreshToken\"://\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwMSwiZW1haWwiOiJlbWFpbEBlbWFpbC5jb20iLCJpYXQiOjE3NzUxMTIwNTIsImV4cCI6MTc3NTk3NjA1MiwiaXNzIjoiand0LWV4YW1wbGUifQ.bLSdt4uMteHx-vFQNyELch0TdeyDUZb2QjeXi3McBPY\"}"
