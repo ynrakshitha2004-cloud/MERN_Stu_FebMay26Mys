@@ -9,8 +9,6 @@ function canAccess(route, role) {
     const allowedRoles = routePermissions[route] || []; // fallback if route not found
     return allowedRoles.includes(role);
 }
-
-// Test cases
 console.log("User access to /admin: ", canAccess("/admin", "user"));       
 console.log("Admin access to /admin: ", canAccess("/admin", "admin"));     
 console.log("Manager access to /reports: ", canAccess("/reports", "manager")); 
