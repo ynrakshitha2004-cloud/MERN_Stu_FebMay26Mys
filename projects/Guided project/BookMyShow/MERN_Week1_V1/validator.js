@@ -27,5 +27,5 @@ module.exports = {
     validateTimeSelection,
     validateSeatCount
 
-}
+};
 
