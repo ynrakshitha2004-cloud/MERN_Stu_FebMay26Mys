@@ -1,0 +1,16 @@
+{
+  "name": "movie-ticket-booking-cli",
+  "version": "1.0.0",
+  "description": "CLT based movie ticket booking & management system using NodeJS and also with fs, Buffer Aand HTTP server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server":"node server.js"
+  },
+  "keywords": [],
+  "author": "Rakesh&Team",
+  "license": "ISC",
+ "dependencies": {
+    "chalk": "^4.1.2"
+  }
+}
