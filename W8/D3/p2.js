@@ -1,0 +1,33 @@
+//pre-save and post-save hooks
+const mongoose = require("mongoose");
+const { title } = require("node:process");
+async function runSaveHookDemo() {
+    try {
+        await mongoose.connect("mongodb://127.0.0.1:27017/hooks");
+        const articleSchema = new mongoose.Schema({
+            title: String,
+            category: String,
+            tag: String
+        });
+        articleSchema.pre("save", function () {
+            this.title = this.title.trim();
+            console.log("pre-save hook: title normalized before save");
+        });
+        articleSchema.pre("save", function (doc) {
+            console.log("post-save hook: doc save with title", doc.title);
+        });
+        const Article = mongoose.models.HookArticle || mongoose.model("HookArticle", articleSchema);
+        const article = new Article({
+            title: "   Understanding Hooke in moongose   ",
+            category: "databse",
+            tag: "save-hook-demo"
+        });
+        await article.save();
+        await mongoose.connection.close();
+        console.log("Connection closed");
+    } catch (error) {
+        console.log("Save hook demo error:", error.message);
+    }
+}
+runSaveHookDemo();
+
