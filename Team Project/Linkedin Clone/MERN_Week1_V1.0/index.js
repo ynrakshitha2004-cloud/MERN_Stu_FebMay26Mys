@@ -1,5 +1,6 @@
 const readline = require("readline");
 const chalk = require("chalk");
+
 const {
   createProfile,
   loginUser,
@@ -13,6 +14,17 @@ const {
   addExperience,
   viewProfile
 } = require("./profile");
+
+const {
+  sendConnectionRequest,
+  viewRequests,
+  handleRequest,
+  viewConnections
+} = require("./connections");
+
+const {
+  showFeed,
+}=require("./feed");
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -46,17 +58,19 @@ function menu() {
 
   rl.question("Choice: ", handleMenu);
 }
+
 function handleMenu(choice) {
 
   switch (choice) {
+
     case "1":
       console.log("\n1. Create Profile");
       console.log("2. Login");
 
       rl.question("Choose: ", opt => {
+
         if (opt === "1") {
           rl.question("Enter Name: ", name => {
-
             rl.question("Enter Headline: ", headline => {
 
               createProfile(name, headline)
@@ -70,9 +84,9 @@ function handleMenu(choice) {
                 });
 
             });
-
           });
         }
+
         else if (opt === "2") {
           rl.question("Enter Name: ", name => {
 
@@ -96,11 +110,12 @@ function handleMenu(choice) {
 
       });
       break;
+
     case "2":
       if (!requireLogin()) return menu();
 
       const profile = viewProfile();
-      console.log(chalk.green("\n--- MY PROfile ---"));
+      console.log(chalk.green("\n--- MY PROFILE ---"));
       console.log(profile);
       menu();
       break;
@@ -142,6 +157,7 @@ function handleMenu(choice) {
 
       });
       break;
+
     case "4":
       if (!requireLogin()) return menu();
 
@@ -159,13 +175,50 @@ function handleMenu(choice) {
       }
       menu();
       break;
+
     case "5":
+      if (!requireLogin()) return menu();
+
+      rl.question("Enter User ID to connect: ", id => {
+        sendConnectionRequest(id);
+        menu();
+      });
+      break;
+
     case "6":
+      if (!requireLogin()) return menu();
+
+      viewRequests();
+      menu();
+      break;
+
     case "7":
+      if (!requireLogin()) return menu();
+
+      viewRequests();
+
+      rl.question("Enter request number: ", num => {
+        rl.question("Accept or Reject (a/r): ", action => {
+
+          if (action === "a") handleRequest(Number(num), "accept");
+          else handleRequest(Number(num), "reject");
+
+          menu();
+        });
+      });
+      break;
+
     case "8":
-    case "9":
+      if (!requireLogin()) return menu();
+
+      viewConnections();
+      menu();
+      break;
+
     case "10":
-    case "11":
+      if (!requireLogin()) return menu();
+      showFeed();
+      menu();
       break;
 
     case "12":
@@ -178,4 +231,5 @@ function handleMenu(choice) {
       menu();
   }
 }
+
 menu();
