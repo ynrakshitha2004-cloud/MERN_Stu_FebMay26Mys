@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
         required: [true, "Email is required"],
         unique: true,
         lowercase: true,
-        match: [/^\s+@\s+\.\s+$/, "please use valid email"],
+        match: [/^\S+@\S+\.\S+$/, "please use valid email"],
         index: true,
     },
     password: {
@@ -23,8 +23,8 @@ const userSchema = new mongoose.Schema({
     },
     role: {
         type: String,
-        required: ["user", admin],
-        default: user,
+        required: ["user", "admin"],
+        default: "user",
     },
     isVerified: {
         type: Boolean,
@@ -37,7 +37,7 @@ const userSchema = new mongoose.Schema({
     }
 );
 //Hashin the password before save
-userSchema.pte("save", async function () {
+userSchema.pre("save", async function () {
     if (this.isModified("password")) {
         return;
     }
