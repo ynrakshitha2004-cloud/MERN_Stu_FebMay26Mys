@@ -1,10 +1,9 @@
 const eventEmitter = require("./events");
 const users = [];
 let currentUser = null;
-
-// Create Profile
 function createProfile(name, headline) {
   return new Promise((resolve, reject) => {
+
     if (!name) return reject("Name is required");
 
     const exists = users.find(u => u.name === name);
@@ -17,7 +16,8 @@ function createProfile(name, headline) {
       skills: [],
       education: [],
       experience: [],
-      connections: []
+      connections: [],
+      requests: [] 
     };
 
     users.push(user);
@@ -26,9 +26,9 @@ function createProfile(name, headline) {
   });
 }
 
-// Login
 function loginUser(name) {
   return new Promise((resolve, reject) => {
+
     const user = users.find(u => u.name === name);
 
     if (!user) return reject("User not found");
@@ -39,16 +39,13 @@ function loginUser(name) {
   });
 }
 
-// Get Current User
 function getCurrentUser() {
   return currentUser;
 }
 
-// Get Profile by ID
 function getUserById(id) {
   return users.find(u => u.id === id);
 }
-
 module.exports = {
   users,
   createProfile,
