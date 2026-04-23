@@ -5,6 +5,7 @@ const {protect} = require("../middleware/auth.middleware");
 const {authorize} = require("../middleware/role.middleware");
 
 //Public route
+
 router.get("/",showController.getShows);
 router.get("/:id",showController.getShowById);
 
