@@ -4,20 +4,20 @@ const educationData = [
     degree: "Bachelor of Engineering in Computer science",
     duration: "Dec 2022 - May 2026",
     location: "Mandya, Karnataka",
-    score: "CGPA: 8.7"
+    score: "CGPA: 8.4"
   },
   {
-    institution: "Viveka PU college,sargur,HD kote",
+    institution: "sadvidya pu collage",
     degree: "Pre-University (PUC)",
     duration: "2020 - 2022",
     location: "Mysore, Karnataka",
-    score: "Percentage: 85%"
+    score: "Percentage: 70%"
   },
   {
-    institution: "Adarsha vidyalaya(RMSA),kollegal",
+    institution: "Rotary High school mandya",
     degree: "SSLC (10th)",
     duration: "2020",
     location: "Chamarajnagar, Karnataka",
-    score: "Percentage: 93.12%"
+    score: "Percentage: 74%"
   }
 ];
