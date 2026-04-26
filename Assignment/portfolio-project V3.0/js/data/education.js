@@ -10,14 +10,14 @@ const educationData = [
     institution: "sadvidya pu collage",
     degree: "Pre-University (PUC)",
     duration: "2020 - 2022",
-    location: "Mysore, Karnataka",
+    location: "Mandya, Karnataka",
     score: "Percentage: 70%"
   },
   {
     institution: "Rotary High school mandya",
     degree: "SSLC (10th)",
     duration: "2020",
-    location: "Chamarajnagar, Karnataka",
+    location: "mandya, Karnataka",
     score: "Percentage: 74%"
   }
 ];
