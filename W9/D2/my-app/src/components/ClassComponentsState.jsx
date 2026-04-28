@@ -15,7 +15,7 @@ export class ClassComponentState extends Component{
         }));
     };
 
-    // 3. Render: state/props change
+    // 3. Render: state/props changes
     render(){
         console.log("render() called");
         return(
