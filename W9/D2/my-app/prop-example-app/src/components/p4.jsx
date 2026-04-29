@@ -22,7 +22,7 @@ function DrillUserPanel({user}){
     )
 }
 function ProfileAvatar({ user }){
-    return <img src={`/${user.name}.png`} alt={user.name} />
+    return <img src={`/${user.Rakshitha}.png`} alt={user.Rakshitha.png} />
 }
 
 export function PropDrillingDemo(){
