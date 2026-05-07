@@ -3,6 +3,8 @@ import {EventObject} from './components/p2'
 import {PassingArguments} from './components/p3'
 import {UseCallbackEvents} from './components/p5'
 import {EventDelegation} from './components/p6'
+import {ControlledComponent} from './components/p7'
+ 
 import './App.css'
 
 function App() {
@@ -14,7 +16,8 @@ function App() {
       {/* <EventObject /> */}
       {/* <PassingArguments /> */}
       {/* <UseCallbackEvents /> */}
-      <EventDelegation />
+      {/* <EventDelegation /> */}
+      <ControlledComponent />
     </>
   )
 }
