@@ -1,4 +1,4 @@
-import {EventBasics} from './components/p1'
+import {BasicsEvent} from './components/p1'
 import './App.css'
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <EventBasics />
+      <BasicsEvent />
     </>
   )
 }
