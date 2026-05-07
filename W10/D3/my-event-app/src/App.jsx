@@ -4,22 +4,19 @@ import {PassingArguments} from './components/p3'
 import {UseCallbackEvents} from './components/p5'
 import {EventDelegation} from './components/p6'
 import {ControlledComponent} from './components/p7'
- 
-import './App.css'
+import { KeyboardEvent } from "./components/p8";
 
 function App() {
-  
-
-  return (
+   return (
     <>
-      {/* <BasicsEvent /> */}
+      {/* <EventBasics /> */}
       {/* <EventObject /> */}
       {/* <PassingArguments /> */}
       {/* <UseCallbackEvents /> */}
       {/* <EventDelegation /> */}
-      <ControlledComponent />
+      {/* <FormsPattern /> */}
+      <KeyboardEvent />
     </>
   )
 }
-
 export default App
