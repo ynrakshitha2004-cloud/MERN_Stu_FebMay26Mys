@@ -1,8 +1,8 @@
-export function ProductsPage() {
-    const {id} = useParams();
+export function ProductDetailsPage() {
+    const { id } = useParams();
     return (
         <div>
-            <h3>Products Id: {id}</h3>
+            <h3>Product Id: {id}</h3>
         </div>
     );
 }
